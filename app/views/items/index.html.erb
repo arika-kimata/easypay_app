@@ -1,0 +1,12 @@
+<%= link_to 'マイページへ行く', user_path(current_user) %>
+<div class="content">
+  <% @items.each do |item| %> 
+    <p>商品名：<%= item.name %></p>
+    <p>値段：<%= item.price %>円</p>
+    <p>説明文：<%=item.text%></p>
+    <p>送料：<%=item.shipping_charges_id%></p>
+    <p>配送地域：<%=item.prefectures_id%></p>
+    <p>配送日数：<%=item.shipping_date_id%></p>
+    <%= link_to '購入する'%>
+  <% end %>
+</div>
